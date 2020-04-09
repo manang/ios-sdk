@@ -1,5 +1,5 @@
 #!/bin/sh
-set -eo pipefail
+set -eox pipefail
 
 gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/YOUR_PROFILE.mobileprovision ./.github/secrets/YOUR_PROFILE.mobileprovision.gpg
 gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/Certificates.p12 ./.github/secrets/YOUR_CERTIFICATE.p12.gpg
