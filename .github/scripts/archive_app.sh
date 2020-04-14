@@ -7,7 +7,7 @@ pod install
 xcodebuild -workspace hICNTools.xcworkspace \
             -scheme hICNTools
             -sdk iphoneos \
-            -allowProvisioningUpdates
+            -allowProvisioningUpdates \
             -configuration AppStoreDistribution \
-            -archivePath $PWD/build/hICNTools.xcarchive \
+            -archivePath $PWD/build/hICNTools.xcarchive -allowProvisioningUpdates \
             clean archive | xcpretty
